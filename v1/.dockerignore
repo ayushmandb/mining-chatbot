@@ -1,0 +1,16 @@
+.git
+.gitignore
+README.md
+
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+.env
+.env.example
+
+# Regenerated at runtime — don't bloat the image with these
+data/base_index/
+data/*.db
+data/*.sqlite3

@@ -1,0 +1,21 @@
+__pycache__/
+*.py[cod]
+*.pyc
+
+.venv/
+venv/
+env/
+
+.env
+.env.*
+!.env.example
+
+# Regenerated automatically — don't need to be in git
+data/base_index/
+data/*.db
+data/*.sqlite3
+
+# OS / editor junk
+.DS_Store
+.idea/
+.vscode/

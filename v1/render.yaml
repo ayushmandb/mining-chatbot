@@ -1,0 +1,26 @@
+# Optional: lets you deploy via Render's "Blueprint" feature instead of
+# clicking through the dashboard. Not required — you can also just
+# create a Web Service from the Render dashboard and set env vars there.
+#
+# NOTE: the `disk:` block (persistent storage) requires a paid Render
+# instance type (Starter or above) — it is not available on the Free plan.
+# If you're on Free, remove the disk block; your books/index/chat-history
+# will rebuild/reset on every restart (see README.md for details).
+
+services:
+  - type: web
+    name: mining-chatbot
+    env: docker
+    plan: starter
+    healthCheckPath: /_stcore/health
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: DATA_DIR
+        value: /app/data
+    disk:
+      name: mining-chatbot-data
+      mountPath: /app/data
+      sizeGB: 1
