@@ -10,7 +10,8 @@ venv/
 .env
 .env.example
 
-# Regenerated at runtime — don't bloat the image with these
-data/base_index/
+# NOTE: data/base_index/ is intentionally NOT ignored here — we commit
+# the prebuilt index to git and want it baked into the Docker image, so
+# a fresh Render deploy has a working chatbot without a rebuild step.
 data/*.db
 data/*.sqlite3
