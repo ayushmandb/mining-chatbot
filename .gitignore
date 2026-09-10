@@ -11,7 +11,6 @@ env/
 !.env.example
 
 # Regenerated automatically — don't need to be in git
-data/base_index/
 data/*.db
 data/*.sqlite3
 
